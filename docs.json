@@ -31,6 +31,12 @@
               "miscellaneous/change-logs",
               "miscellaneous/variables"
                         ]
+          },
+          {
+            "group": "Legal",
+            "pages": [
+              "legal/privacy-policy"
+                                    ]
           }
         ]
       }
