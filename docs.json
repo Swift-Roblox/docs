@@ -20,15 +20,17 @@
             ]
           },
           {
-            "group": "Essentials",
+            "group": "Plugins",
             "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/settings",
-              "essentials/navigation",
-              "essentials/reusable-snippets"
+
             ]
+          },
+          {
+            "group": "Miscellaneous",
+            "pages": [
+              "miscellaneous/change-logs",
+              "miscellaneous/variables"
+                        ]
           }
         ]
       }
