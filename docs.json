@@ -22,7 +22,13 @@
           {
             "group": "Plugins",
             "pages": [
-              "plugins/infraction"
+              "plugins/infraction",
+              "plugins/promotion",
+              "plugins/appeal",
+              "plugins/moderation",
+              "plugins/shift"
+
+
             ]
           },
           {
