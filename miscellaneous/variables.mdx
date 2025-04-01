@@ -1,0 +1,113 @@
+---
+title: Variables
+description: "This page lists placeholders for custom embeds, enabling dynamic content by inserting user, server, and bot data into messages."
+icon: "code"
+
+---
+
+<Note>All variables are case-sensitive, so ensure accurate spelling and capitalization.</Note>
+
+## Infraction Variables
+<AccordionGroup>
+  <Accordion title="Miscellaneous Variables" icon="puzzle-piece">
+| Variable            | Description |  
+|-------------------------|----------------------------------------------|  
+| `{type}`            | Displays the type of infraction (e.g., Warning, Mute, Ban). |  
+| `{reason}`          | Displays the reason for the infraction. |  
+
+  </Accordion>
+
+
+  <Accordion title="Time Variables" icon="clock">
+    | Variable            | Description |  
+|-------------------------|----------------------------------------------|  
+| `{time}`            | Displays the exact timestamp of the infraction (`<t:UNIX:f>`). |  
+| `{time-relative}`   | Displays the relative time (e.g., `5 minutes ago`) (`<t:UNIX:R>`). |  
+| `{time-shortTime}`  | Displays only the time in short format (`<t:UNIX:t>` → `12:30 PM`). |  
+| `{time-longTime}`   | Displays the full time (`<t:UNIX:T>` → `12:30:45 PM`). |  
+| `{time-shortDate}`  | Displays only the date (`<t:UNIX:d>` → `04/22/2024`). |  
+| `{time-longDate}`   | Displays the full date (`<t:UNIX:D>` → `April 22, 2024`). |  
+  </Accordion>
+
+   <Accordion title="Author Variables" icon="user">
+| Variable            | Description |  
+|-------------------------|----------------------------------------------|  
+| `{author-mention}`  | Displays a mention of the person who issued the infraction (`<@123456789012345678>`). |  
+| `{author-id}`       | Displays the Discord ID of the infraction issuer. |  
+| `{author-username}` | Displays the username of the issuer (e.g., `JohnDoe`). |  
+| `{author-displayname}` | Displays the display name of the issuer (e.g., `John`). |  
+| `{author-icon}`     | Displays the profile picture (avatar URL) of the issuer. |  
+  </Accordion>
+
+   <Accordion title="Recipient Variables" icon="user-tag">
+| Variable            | Description |  
+|-------------------------|----------------------------------------------|  
+| `{staff-mention}`   | Displays a mention of the user receiving the infraction (`<@987654321098765432>`). |  
+| `{staff-id}`        | Displays the Discord ID of the infracted user. |  
+| `{staff-username}`  | Displays the username of the infracted user. |  
+| `{staff-displayname}` | Displays the display name of the infracted user. |  
+| `{staff-icon}`      | Displays the profile picture (avatar URL) of the infracted user. |  
+  </Accordion>
+
+</AccordionGroup>
+
+---
+
+## Anti-Ping Variables  
+<AccordionGroup>
+   <Accordion title="Author Variables" icon="user">
+| Variable          | Description |  
+|----------------------|----------------------------------------------|  
+| `{author-mention}`  | Displays a mention of the author who sent the message (e.g., `<@123456789012345678>`). |  
+| `{author-username}` | Displays the author's username (e.g., `JohnDoe`). |  
+| `{author-icon}`     | Displays the author's profile picture (avatar URL). |  
+| `{users}`          | Lists the users who were pinged by the author (e.g., `@User1, @User2`). |  
+  </Accordion>
+</AccordionGroup>
+
+---
+## Promotion Variables
+<AccordionGroup>
+  <Accordion title="Miscellaneous Variables" icon="puzzle-piece">
+| Variable    | Description |  
+|---------------|------------------------------------------------|  
+| `{new-role}`  | Displays the new role assigned to the promoted user (e.g., `Moderator`, `Admin`). |  
+| `{reason}`    | Displays the reason for the promotion. |  
+
+  </Accordion>
+
+   <Accordion title="Time Variables" icon="clock">
+    | Variable            | Description |  
+|-------------------------|----------------------------------------------|  
+| `{time}`            | Displays the exact timestamp of the promotion (`<t:UNIX:f>`). |  
+| `{time-relative}`   | Displays the relative time (e.g., `5 minutes ago`) (`<t:UNIX:R>`). |  
+| `{time-shortTime}`  | Displays only the time in short format (`<t:UNIX:t>` → `12:30 PM`). |  
+| `{time-longTime}`   | Displays the full time (`<t:UNIX:T>` → `12:30:45 PM`). |  
+| `{time-shortDate}`  | Displays only the date (`<t:UNIX:d>` → `04/22/2024`). |  
+| `{time-longDate}`   | Displays the full date (`<t:UNIX:D>` → `April 22, 2024`). |  
+  </Accordion>
+
+
+
+   <Accordion title="Author Variables" icon="user">
+| Variable            | Description |  
+|-------------------------|-------------------------------------------------|  
+| `{author-mention}`  | Displays a mention of the person who issued the promotion (`<@123456789012345678>`). |  
+| `{author-id}`       | Displays the Discord ID of the promotion issuer. |  
+| `{author-username}` | Displays the username of the issuer (e.g., `JohnDoe`). |  
+| `{author-displayname}` | Displays the display name of the issuer (e.g., `John`). |  
+| `{author-icon}`     | Displays the profile picture (avatar URL) of the issuer. |  
+  </Accordion>
+
+   <Accordion title="Recipient Variables" icon="user-tag">
+| Variable            | Description |  
+|-------------------------|-------------------------------------------------|  
+| `{staff-mention}`   | Displays a mention of the user being promoted (`<@987654321098765432>`). |  
+| `{staff-id}`        | Displays the Discord ID of the promoted user. |  
+| `{staff-username}`  | Displays the username of the promoted user. |  
+| `{staff-displayname}` | Displays the display name of the promoted user. |  
+| `{staff-icon}`      | Displays the profile picture (avatar URL) of the promoted user. |  
+  </Accordion>
+</AccordionGroup>
+
+

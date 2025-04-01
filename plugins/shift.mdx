@@ -1,0 +1,36 @@
+---
+title: Shifts
+description: "This module allows staff to Clock their On-Duty time"
+icon: "clock"
+---
+## How does this Module Work?
+This module allows **Server Staff** to manage their Shift onto your Server Database, for Management Checks such as Quotas. Staff can go on duty, on break and off duty. This module will simplify Staffing Management, by automatically logging shifts into your Log Channel, and via the Database, allowing Management to view shifts quickly with ease. On-Duty & On-Break roles are configurable, and will automatically be given to the user.
+
+## How do I configure the Shift module?
+To set up the Shift module, first use the `/config` command to access the configuration panel. From there, you’ll see a "**Select Plugin**" dropdown menu. Click the menu and choose the **Shifs module** and click "**Enable**" button. Once enabled, you will have the option to configure various settings, including the **Shifts Channel** where all shifts will be recorded, the **On Duty Role** where User's on Duty will recieve the role & the **On Break Role** where User's on Break will recieve the role.
+
+<Note>
+You must configure the staff role and management under the guild settings options **(ONLY Owners can use this option).**
+</Note>
+
+<Warning>
+User's must have the Staff Role to manage a shift.
+</Warning>
+
+## Commands
+<Card title="">
+<CardGroup cols={3}>
+  <Card title="shift manage" icon="square-1">
+ Allows a Staff Member to manage their Shift Status
+  </Card>
+  <Card title="shift leaderboard" icon="square-2">
+  Lists each Staff Member and their recorded Shift Time
+  </Card>
+  <Card title="shift online" icon="square-3">
+  Lists all Staff Members On-Duty
+ </Card>
+  <Card title="shift admin" icon="square-4">
+  Manage & edit/void another User's Shift
+ </Card>
+</CardGroup>
+</Card>

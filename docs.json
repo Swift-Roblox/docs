@@ -1,0 +1,88 @@
+{
+  "$schema": "https://mintlify.com/docs.json",
+  "theme": "mint",
+  "name": "Swift Documentation",
+  "colors": {
+    "primary": "#E77948",
+    "light": "#F18E63",
+    "dark": "#FAA37D"
+  },
+  "favicon": "/favicon.svg",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Documentation",
+        "groups": [
+          {
+            "group": "Get Started",
+            "pages": [
+              "introduction"
+            ]
+          },
+          {
+            "group": "Plugins",
+            "pages": [
+              "plugins/infraction",
+              "plugins/promotion",
+              "plugins/appeal",
+              "plugins/moderation",
+              "plugins/shift"
+
+
+            ]
+          },
+          {
+            "group": "Miscellaneous",
+            "pages": [
+              "miscellaneous/change-logs",
+              "miscellaneous/variables"
+                        ]
+          },
+          {
+            "group": "Legal",
+            "pages": [
+              "legal/privacy-policy"
+                                    ]
+          }
+        ]
+      }
+    ],
+    "global": {
+      "anchors": [
+        {
+          "anchor": "Website",
+          "href": "https://swiftbot.site",
+          "icon": "browser"
+        },
+        {
+          "anchor": "Support Server",
+          "href": "https://discord.gg/7vPdpuaeWC",
+          "icon": "discord"
+        }
+      ]
+    }
+  },
+  "logo": {
+    "light": "/logo/light.svg",
+    "dark": "/logo/dark.svg"
+  },
+  "navbar": {
+    "links": [
+      {
+        "label": "Support",
+        "href": "mailto:support@swiftbot.site"
+      }
+    ],
+    "primary": {
+      "type": "button",
+      "label": "Contact Us",
+      "href": "https://discord.gg/7vPdpuaeWC"
+    }
+  },
+  "footer": {
+    "socials": {
+      "github": "https://github.com/orgs/Swift-Roblox",
+      "discord": "https://discord.gg/7vPdpuaeWC"
+    }
+  }
+}
