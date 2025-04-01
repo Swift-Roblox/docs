@@ -22,7 +22,7 @@
           {
             "group": "Plugins",
             "pages": [
-
+              "plugins/infraction"
             ]
           },
           {
