@@ -1,0 +1,69 @@
+---
+title: Verification  
+description: "This module allows you to verify users, connect their Roblox identity, and keep your server clean and secure."  
+icon: "fingerprint"  
+---
+
+## What is Verification?
+
+The **Verification Module** links a user’s Discord account to their Roblox identity.  
+This process ensures users are who they say they are, helping staff enforce rules, manage in-game bans, and handle appeals more accurately.
+
+Once verified, a user’s Roblox data will be stored and used across the bot’s systems—such as **Appeals**, **Moderation**, and **Shift Logging**.
+
+---
+
+## How to Configure Verification
+
+To enable and configure the Verification system:
+
+1. Run the `/config` command to access the Configuration Panel.
+2. Open the "**Select Plugin**" dropdown menu.
+3. Choose the **Verification Module**.
+4. Click "**Enable**" to activate verification in your server.
+
+<Note>
+Make sure to also configure the **Verified Role** under Guild Settings so users get a role once they successfully verify.
+</Note>
+
+---
+
+## How to Verify
+
+Once the module is enabled, members can simply run the `/verify` command in your server.
+
+Upon execution, the bot will respond with an **interactive embed**:
+
+- If the user is **already verified**, the embed will display their connected Roblox account along with an **Unlink** button.
+- If the user is **not verified**, the embed will provide a **Verify** button that directs them to [verify.swiftbot.site](https://verify.swiftbot.site).
+
+### Verification Flow:
+
+1. The user clicks the **Verify** button in the embed.
+2. They're redirected to [verify.swiftbot.site](https://verify.swiftbot.site).
+3. The user will first be prompted to **authenticate with Discord**.
+4. Then, they'll log in using their **Roblox account**.
+5. Upon successful completion, their account is linked and they’ll be granted the configured **Verified Role** and **Nickname**.
+
+<Warning>
+If the user is unable to verify, it is likely because their Roblox account is **underage** and does not meet the requirements to use the OAuth2 verification system.
+</Warning>
+
+<Note>
+Users must remain in the server and have **DMs enabled** for full functionality and follow-up notifications.
+</Note>
+
+---
+
+## Commands
+
+<Card title="Verification Commands">
+  <CardGroup cols={1}>
+
+    <Card title="/verify" icon="square-1">
+      Initiates the verification process for the user running the command.  
+      The bot will guide them through connecting their Discord and Roblox accounts via a secure system.
+    </Card>
+
+  </CardGroup>
+</Card>

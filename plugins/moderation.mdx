@@ -18,20 +18,57 @@ User's must have the Staff Role to execute a Moderation
 </Warning>
 
 ## Commands
-<Card title="">
-<CardGroup cols={3}>
-  <Card title="moderation execute" icon="square-1">
-Executes & records a User Moderation
-  </Card>
-  <Card title="moderation view" icon="square-2">
-View a User's Moderation records
-  </Card>
-<Card title="moderation remove" icon="square-3">
-Remove's a Moderation from a User's record
-  </Card>
-<Card title="moderation mine" icon="square-4">
-Allows a User to view their own Moderation records
-  </Card>
+<Card title="Moderation Commands">
+  <CardGroup cols={1}>
 
-</CardGroup>
+    <Card title="moderation execute" icon="square-1">
+      Executes and logs a new moderation action against a specified user. This may include actions like warnings, kicks, or bans, and is stored in their moderation history.
+
+      <Card title="Command Parameters">
+        <ResponseField name="player_name" type="string" required>
+          Enter the Roblox username you want to moderate.
+        </ResponseField>
+         <ResponseField name="punishment" type="string" required>
+          Specify the type of moderation (e.g., warning, mute, kick, ban).
+        </ResponseField>
+        <ResponseField name="reason" type="string" required>
+          Provide the reason for the moderation action.
+        </ResponseField>
+<ResponseField name="notify" type="boolean" required>
+  Choose whether to notify the player about this action. Set to `true` to send them a notification.
+<Warning>
+  **Notification only works if you have configured your PRC API key under the **Credentials** page.** To add your API key, run the `/config` command and navigate to the **Guild Utils Menu**. In the dropdown, select the **Credentials** option. Then, click the **API Key** button and enter your PRC API key. This integration is required for the system to notify users automatically from your ER:LC Private Server after a successful moderation.
+</Warning>
+</ResponseField>
+      </Card>
+    </Card>
+
+    <Card title="moderation view" icon="square-2">
+      Displays all moderation records linked to a specific user, including details such as the reason, action type, date, and issuing staff member.
+
+      <Card title="Command Parameters">
+        <ResponseField name="player_name" type="string" required>
+          Enter the Roblox username whose moderation history you want to view.
+        </ResponseField>
+      </Card>
+    </Card>
+
+    <Card title="moderation remove" icon="square-3">
+      Removes a specific moderation record from a user's history. This can be used to revoke mistaken or outdated actions.
+
+      <Card title="Command Parameters">
+        <ResponseField name="player_name" type="string" required>
+          Enter the Roblox username whose moderation record you want to remove.
+        </ResponseField>
+        <ResponseField name="case_id" type="string" required>
+          Provide the ID of the moderation record to remove.
+        </ResponseField>
+      </Card>
+    </Card>
+
+    <Card title="moderation mine" icon="square-4">
+      Allows a user to view their own moderation history privately. This helps them stay informed about past actions taken against them.
+    </Card>
+
+  </CardGroup>
 </Card>

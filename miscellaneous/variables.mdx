@@ -49,6 +49,15 @@ icon: "code"
 | `{staff-icon}`      | Displays the profile picture (avatar URL) of the infracted user. |  
   </Accordion>
 
+  <Accordion title="Guild Variables" icon="server">
+| Variable         | Description |
+|------------------|-------------|
+| `{guild-name}`   | Displays the server (guild) name where the giveaway was created. |
+| `{guild-id}`     | Shows the Discord server's ID. |
+| `{guild-icon}`   | Displays the server icon (dynamic URL). |
+</Accordion>
+
+
 </AccordionGroup>
 
 ---
@@ -63,6 +72,7 @@ icon: "code"
 | `{author-icon}`     | Displays the author's profile picture (avatar URL). |  
 | `{users}`          | Lists the users who were pinged by the author (e.g., `@User1, @User2`). |  
   </Accordion>
+
 </AccordionGroup>
 
 ---
@@ -108,6 +118,58 @@ icon: "code"
 | `{staff-displayname}` | Displays the display name of the promoted user. |  
 | `{staff-icon}`      | Displays the profile picture (avatar URL) of the promoted user. |  
   </Accordion>
+
+  <Accordion title="Guild Variables" icon="server">
+| Variable         | Description |
+|------------------|-------------|
+| `{guild-name}`   | Displays the server (guild) name where the giveaway was created. |
+| `{guild-id}`     | Shows the Discord server's ID. |
+| `{guild-icon}`   | Displays the server icon (dynamic URL). |
+</Accordion>
+
 </AccordionGroup>
+---
+## Giveaway Variables
+<AccordionGroup>
 
+<Accordion title="Giveaway Details" icon="gift">
+| Variable         | Description |
+|------------------|-------------|
+| `{description}`  | Displays the description or summary of the giveaway. |
+| `{winners}`      | Shows the number of winners selected for the giveaway. |
+| `{prize}`        | Shows the prize name set for the giveaway. |
+| `{entries}`      | Displays the current number of entries/participants. (Initially set to `0`) |
+</Accordion>
 
+<Accordion title="Time Variables" icon="clock">
+| Variable            | Description |
+|---------------------|-------------|
+| `{time}`            | The creation time of the giveaway (`<t:UNIX:f>` format). |
+| `{time-relative}`   | Relative time from creation (e.g., `in 5 minutes`). |
+| `{time-shortTime}`  | Short time only (e.g., `12:45 PM`). |
+| `{time-longTime}`   | Long format time (e.g., `12:45:30 PM`). |
+| `{time-shortDate}`  | Short date format (e.g., `04/05/2025`). |
+| `{time-longDate}`   | Full date format (e.g., `April 5, 2025`). |
+| `{end-time}`        | Displays when the giveaway will end in full timestamp format. |
+| `{end-relative}`    | Shows how long until the giveaway ends (e.g., `in 10 minutes`). |
+</Accordion>
+
+<Accordion title="Host Variables" icon="user">
+| Variable              | Description |
+|------------------------|-------------|
+| `{host-mention}`       | Mentions the giveaway host (e.g., `<@123456789012345678>`). |
+| `{host-id}`            | Displays the host's Discord user ID. |
+| `{host-username}`      | Shows the username of the giveaway host. |
+| `{host-displayname}`   | Shows the display name of the host (falls back to username). |
+| `{host-icon}`          | Displays the avatar of the giveaway host (dynamic URL). |
+</Accordion>
+
+<Accordion title="Guild Variables" icon="server">
+| Variable         | Description |
+|------------------|-------------|
+| `{guild-name}`   | Displays the server (guild) name where the giveaway was created. |
+| `{guild-id}`     | Shows the Discord server's ID. |
+| `{guild-icon}`   | Displays the server icon (dynamic URL). |
+</Accordion>
+
+</AccordionGroup>

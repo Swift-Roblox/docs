@@ -18,11 +18,22 @@ User's must have the Management Role to execute a Promotion
 </Warning>
 
 ## Commands
-<Card title="">
-<CardGroup cols={3}>
-  <Card title="promote" icon="gear">
-Issue a promotion to the respective Staff Member
+<CardGroup cols={1}>
+<Card title="Promote" icon="square-1">
+  Issues a promotion to a specified staff member by assigning them a new role. Useful for recognizing performance, rank progression, or internal role changes.
+
+  <Card title="Command Parameters">
+    <ResponseField name="user" type="user" required>
+      Select the staff member you want to promote.
+    </ResponseField>
+    <ResponseField name="new_role" type="role" required>
+      Select the new role to assign to the staff member.
+    </ResponseField>
+    <ResponseField name="reason" type="string">
+      Optionally provide a reason for the promotion.
+    </ResponseField>
   </Card>
+</Card>
+
 
 </CardGroup>
-</Card>

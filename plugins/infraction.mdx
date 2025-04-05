@@ -3,31 +3,65 @@ title: Infraction
 description: "This module simplifies staff management by letting you fully customize infraction settings, enforce guidelines, and maintain order efficiently."
 icon: "gavel"
 ---
+
 ## What is Infraction?
+
 An **infraction** is a recorded violation of server rules or staff policies. In Swift, infractions help management track disciplinary actions such as warnings, strikes, notices, demotions, and terminations, ensuring a structured and transparent moderation system.
 
 ## How do I configure the Infraction module?
+
 To set up the Infraction module, first use the `/config` command to access the configuration panel. From there, you’ll see a "**Select Plugin**" dropdown menu. Click the menu and choose the **Infraction module** and click "**Enable**" button. Once enabled, you will have the option to configure various settings, including the **infraction log channel** where all infractions will be recorded, as well as a **[custom embed](/miscellaneous/variables#infraction-variables)** to personalize the appearance of infraction messages.
 
 <Note>
-You must configure the staff role and management under the guild settings options **(ONLY Owners can use this option).**
+  You must configure the staff role and management under the guild settings
+  options **(ONLY Owners can use this option).**
 </Note>
 
 <Warning>
-User's must have the Management Role to execute/manage an Infraction
+  User's must have the Management Role to execute/manage an Infraction
 </Warning>
 
 ## Commands
+
 <Card title="">
-<CardGroup cols={3}>
-  <Card title="Infraction Issue" icon="square-1">
-Issues & Adds a Infraction to a User's record
+<CardGroup cols={1}>
+<Card title="Infraction Issue" icon="square-1">
+  Records a disciplinary infraction for a specified user, storing details such as the reason, type, and issuing staff member in their moderation history.
+
+  <Card title="Command Parameters">
+    <ResponseField name="user" type="user" required>
+      Select the staff member receiving the infraction.
+    </ResponseField>
+    <ResponseField name="reason" type="string" required>
+      Provide the reason for issuing the infraction.
+    </ResponseField>
+    <ResponseField name="type" type="string" required>
+      Specify the type of infraction (e.g., warning, strike, suspension).
+    </ResponseField>
   </Card>
-  <Card title="Infraction List" icon="square-2">
-Lists all Infraction Records linked with a User
- </Card>
-  <Card title="Infraction Remove" icon="square-3">
-  Removes a Linked Infraction Record from a User
- </Card>
+</Card>
+<Card title="Infraction View" icon="square-2">
+  Displays a list of all infraction records associated with a specific user, including details such as reason, type, and issuing staff member.
+
+  <Card title="Command Parameters">
+    <ResponseField name="user" type="user" required>
+      Select the staff member whose infraction records you want to view.
+    </ResponseField>
+  </Card>
+</Card>
+
+ <Card title="Infraction Remove" icon="square-3">
+  Removes a specific infraction record linked to a user, allowing staff to correct or revoke previously issued infractions.
+
+  <Card title="Command Parameters">
+    <ResponseField name="user" type="user" required>
+      Select the user whose infraction you want to remove.
+    </ResponseField>
+    <ResponseField name="infractionId" type="string" required>
+      Provide the ID of the infraction you wish to remove.
+    </ResponseField>
+  </Card>
+</Card>
+
 </CardGroup>
 </Card>

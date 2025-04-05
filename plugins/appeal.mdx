@@ -4,9 +4,12 @@ description: "This module allows Banned Members to appeal their wrongful ban."
 icon: "lock"
 ---
 ## How does this work?
-Once the member clicks onto the Appeal Button, they will be greated with a Modal / Form. Within this modal, the user will input a few questions relevant and in correspondence to the details of their ban. Their Roblox Details will automatically be collected via our Automatic Verification System. After the user has submitted their appeal, this will be sent to your submittion channel; where a Server Manager can Accept/Deny the appeal. The User will automatically be notified of the result, and unbanned from your ER:LC Private Server if accepted. 
-## How do I configure the Promotion module?
-To set up the Promotion module, first use the `/config` command to access the configuration panel. From there, you’ll see a "**Select Plugin**" dropdown menu. Click the menu and choose the **Ban Appeal module** and click "**Enable**" button. Once enabled, you will have the option to configure various settings, including the **appeal channel** where your Appeal Button will send, as well the **Submittion Channel**, where the Appeal Submittions will be sent for review.
+When a user clicks the button, they will be presented with a modal (form) to fill out. This modal will prompt the user with a series of questions related to their ban, allowing them to explain their situation and provide any relevant context. Their Roblox account details are automatically retrieved through our integrated Verification System—no manual input required. Once the appeal form is submitted, the data is sent directly to your configured submission channel, where a Server Manager can review the case and choose to accept or deny the appeal. If accepted, the user will automatically be unbanned from your ER:LC Private Server and notified of the result. If denied, they will still receive a notification informing them of the decision.
+<Warning>
+  **Automatic unbanning only works if you have configured your PRC API key under the **Credentials** page.** To add your API key, run the `/config` command and navigate to the **Guild Utils Menu**. In the dropdown, select the **Credentials** option. Then, click the **API Key** button and enter your PRC API key. This integration is required for the system to unban users automatically from your ER:LC Private Server after a successful appeal.
+</Warning>
+## How do I configure the Ban Appeal module?
+To set up the Ban Appeal module, first use the `/config` command to access the configuration panel. From there, you’ll see a "**Select Plugin**" dropdown menu. Click the menu and choose the **Ban Appeal module** and click "**Enable**" button. Once enabled, you will have the option to configure various settings, including the **appeal channel** where your Appeal Button will send, as well the **Submittion Channel**, where the Appeal Submittions will be sent for review.
 
 <Note>
 This module does not currently support customizable questions. This will be added in the near future.
@@ -14,10 +17,9 @@ This module does not currently support customizable questions. This will be adde
 
 ## Commands
 <Card title="">
-<CardGroup cols={3}>
-  <Card title="/appeal button" icon="gear">
-Sends the Appeal Button to your Appeal Channel
-  </Card>
-
+<CardGroup cols={1}>
+<Card title="/appeal button" icon="square-1">
+  Sends an interactive appeal button to your configured appeal channel. This allows users to initiate an appeal request directly through the button.
+</Card>
 </CardGroup>
 </Card>

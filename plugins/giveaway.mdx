@@ -1,39 +1,91 @@
 ---
-title: Giveaways
-description: "This module allows Server Management to host Giveaways"
-icon: "heart"
+title: Giveaways  
+description: "This module allows Server Management to host, manage, and conclude giveaways easily."  
+icon: "gift"  
 ---
+
 ## How does this Module Work?
-Upon the execution of a Giveaway, Member's will be able to participate by clicking on a button attached to the giveaway. This module is made to be interacted with ease! User's are able to view other participants who have entered within the Givewaway. This module contains many Management Commands to administrate a giveaway.
+
+The Giveaway module enables your server to host engaging and automated giveaways. When a giveaway is created, members can enter by clicking an interactive button attached to the giveaway message.
+
+This system is designed with ease-of-use in mind. Members can view the giveaway details and see the number of participants. Server Managers have access to powerful administrative commands to manage ongoing and completed giveaways efficiently.
+
+---
 
 ## How do I configure the Giveaway module?
-To set up the Giveaway module, first use the `/config` command to access the configuration panel. From there, you’ll see a "**Select Plugin**" dropdown menu. Click the menu and choose the **Giveaway Module** and click "**Enable**" button. Once enabled, your Giveaway System is fully setup!
+
+To set up the Giveaway module:
+
+1. Run the `/config` command to open the configuration panel.
+2. In the "**Select Plugin**" dropdown, choose the **Giveaway Module**.
+3. Click the "**Enable**" button.
+
+Once enabled, the Giveaway system will be ready for use on your server!
 
 <Note>
-You must configure the Management under the guild settings options **(ONLY Owners can use this option).**
+You must configure the management roles under **Guild Settings**. Only server owners have access to this option.
 </Note>
 
 <Warning>
-User's must have the Management Role to execute Giveaway Commands.
+Users must have the designated **Management Role** to execute giveaway commands.
 </Warning>
 
+---
+
 ## Commands
-<Card title="">
-<CardGroup cols={3}>
-  <Card title="giveaway create" icon="square-1">
-  Creates a Giveaway
-   </Card>
-  <Card title="giveaway list" icon="square-2">
-  Lists each Giveaway active within the server
-  </Card>
-  <Card title="giveaway end" icon="square-3">
-  End an Active Giveaway and find a winner
- </Card>
-  <Card title="giveaway delete" icon="square-4">
-  Fully delete / void a giveaway, and remove it from the Database
- </Card>
-  <Card title="giveaway reroll" icon="square-5">
-  Reroll the winner for an ended giveaway
- </Card>
+
+<Card title="Giveaway Commands">
+<CardGroup cols={1}>
+
+<Card title="giveaway create" icon="square-1">
+Creates a new giveaway in the current channel.  
+Once executed, a modal will appear prompting the user to fill in the following:
+
+- **Winners:** Number of winners for the giveaway  
+- **Prize:** The prize being offered  
+- **Description** *(optional)*: Additional context or rules for the giveaway  
+- **Duration:** How long the giveaway will last (e.g. `1h`, `30m`, `2d`)
+
+No command parameters are required directly — everything is handled via the modal form.
+</Card>
+
+<Card title="giveaway list" icon="square-2">
+Displays a list of all currently active giveaways in the server.  
+This command does **not** require any parameters.
+</Card>
+
+<Card title="giveaway end" icon="square-3">
+Ends a currently active giveaway and selects the winner(s).
+
+<Card title="Command Parameters">
+<ResponseField name="giveaway_id" type="string" required>
+  Provide the ID of the giveaway you wish to end.
+</ResponseField>
+</Card>
+</Card>
+
+<Card title="giveaway delete" icon="square-4">
+Completely deletes a giveaway and removes it from the database.
+
+<Card title="Command Parameters">
+<ResponseField name="giveaway_id" type="string" required>
+  Provide the ID of the giveaway you want to delete.
+</ResponseField>
+</Card>
+</Card>
+
+<Card title="giveaway reroll" icon="square-5">
+Rerolls a winner for a giveaway that has already ended.
+
+<Card title="Command Parameters">
+<ResponseField name="giveaway_id" type="string" required>
+  Provide the ID of the giveaway to reroll.
+</ResponseField>
+<ResponseField name="count" type="number" required>
+  Enter the number of new winners to select.
+</ResponseField>
+</Card>
+</Card>
+
 </CardGroup>
 </Card>

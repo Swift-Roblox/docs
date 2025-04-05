@@ -27,7 +27,8 @@
               "plugins/appeal",
               "plugins/moderation",
               "plugins/shift",
-              "plugins/giveaway"
+              "plugins/giveaway",
+              "plugins/verification"
 
 
             ]

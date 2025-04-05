@@ -18,19 +18,39 @@ User's must have the Staff Role to manage a shift.
 </Warning>
 
 ## Commands
-<Card title="">
-<CardGroup cols={3}>
-  <Card title="shift manage" icon="square-1">
- Allows a Staff Member to manage their Shift Status
-  </Card>
-  <Card title="shift leaderboard" icon="square-2">
-  Lists each Staff Member and their recorded Shift Time
-  </Card>
-  <Card title="shift online" icon="square-3">
-  Lists all Staff Members On-Duty
- </Card>
-  <Card title="shift admin" icon="square-4">
-  Manage & edit/void another User's Shift
- </Card>
-</CardGroup>
+<Card title="Shift System Commands">
+  <CardGroup cols={1}>
+
+    <Card title="shift manage" icon="square-1">
+      Allows a staff member to start or end their shift.  
+      This command is used by staff to log their shift activity, which is then tracked and added to their total shift time.
+    </Card>
+
+    <Card title="shift leaderboard" icon="square-2">
+      Displays a leaderboard of staff members ranked by their total logged shift time.  
+      This helps track activity and performance across the team.
+    </Card>
+
+    <Card title="shift online" icon="square-3">
+      Lists all staff members currently marked as **On-Duty**.  
+      Helpful for identifying active personnel during ongoing sessions.
+    </Card>
+
+    <Card title="shift admin" icon="square-4">
+      Grants management the ability to manually edit or void another user's shift data.  
+      Useful for correcting shift errors, removing invalid shifts, or adjusting logged time.
+
+      <Card title="Command Parameters">
+        <ResponseField name="user" type="user" required>
+          Select the user whose shift you want to manage.
+        </ResponseField>
+      </Card>
+    </Card>
+
+    <Card title="shift wipe" icon="square-5">
+      Completely resets the shift system by wiping **all recorded shift data** in the current guild.  
+    <Warning>This action is irreversible and should only be used when starting fresh or clearing outdated data.</Warning>
+    </Card>
+
+  </CardGroup>
 </Card>
