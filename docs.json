@@ -39,11 +39,18 @@
               "miscellaneous/change-logs",
               "miscellaneous/variables"
                         ]
-          },
+          }
+        ]
+      },
+      {
+        "tab": "Legal",
+        "groups": [
           {
             "group": "Legal",
             "pages": [
-              "legal/privacy-policy"
+              "legal/privacy-policy",
+              "legal/terms-of-service"
+
                                     ]
           }
         ]
