@@ -39,6 +39,12 @@
               "miscellaneous/change-logs",
               "miscellaneous/variables"
                         ]
+          },
+          {
+            "group": "Integration",
+            "pages": [
+              "integration/prc-api"
+                        ]
           }
         ]
       },
